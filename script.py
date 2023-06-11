@@ -1,3 +1,13 @@
+COMMANDS = {
+    'hello': greeting_func,
+    'add': add_func,
+    'change': change_func,
+    'phone': phone_func,
+    'show-all': show_all_func
+}
+
+MEMORY = {}
+
 def print_help():
     message = "You can only input commands:\nhello\nadd\nphone\nshow-all\nchange\nIf you want exit from programm - input: [good bay] or [exit] or [close]\nFor work with propram, you must enter in the format:\ncommand [enter] | command[hello, show-all]\ncommand [space] name [enter] | command[phone]\ncommand [space] name [space] phone number | command[add, change]"
     return message
@@ -59,17 +69,6 @@ def show_all_func(*args):
     return result
 
 
-MEMORY = {}
-
-COMMANDS = {
-    'hello': greeting_func,
-    'add': add_func,
-    'change': change_func,
-    'phone': phone_func,
-    'show-all': show_all_func
-}
-
-
 def get_handler(command):
     return COMMANDS[command]
 
@@ -101,3 +100,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
